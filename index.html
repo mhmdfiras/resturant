@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Momen Restaurant, the best food in town!">
+    <title>مطعم مؤمن</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* Watermark container */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://scontent.famm7-1.fna.fbcdn.net/v/t39.30808-6/325775050_468022062205923_5737659138675706815_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeERMkpzZu5cn7BEqP84yja-q1vQUcByrBqrW9BRwHKsGl44KaApUA3tQwsMpP1adAN90R9x9QNLFNTGv-aSb_RH&_nc_ohc=mb-Z8zCqOyAQ7kNvgFzqFhn&_nc_ht=scontent.famm7-1.fna&oh=00_AYAfYKQfdpwNMHSE9a7mzyYfQdJCItfWhEH0TrAP0LfYJQ&oe=6700EEDA');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        header {
+            background-image: url('face.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            color: white;
+            text-align: center;
+            padding-top: 60px;
+            font-size: 32px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .menu-category {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .menu-category h3 {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .menu-category ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu-category li {
+            padding: 10px;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+            border: none;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .menu-category li img {
+            margin-left: 10px;
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Style for the prices inside squares */
+        .price {
+            display: inline-block;
+            padding: 5px 10px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Media Queries */
+        @media screen and (min-width: 600px) {
+            .menu-category {
+                width: 48%;
+            }
+        }
+
+        @media screen and (max-width: 599px) {
+            nav a {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .menu-category h3 {
+                font-size: 18px;
+            }
+
+            .menu-category li {
+                padding: 8px;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Watermark Div -->
+<div class="watermark"></div>
+
+<header>
+    أهلا وسهلا بكم في مطعم مؤمن
+</header>
+
+<nav>
+    <a href="#home">الصفحة الرئيسية</a>
+    <a href="#sandwiches">الساندويشات</a>
+    <a href="#frying">المقالي</a>
+    <a href="#mansaf">المنسف</a>
+    <a href="#mandi">طبيخ</a>
+    <a href="#tawasi">التواصي حسب الطلب</a>
+    <a href="#maqluba">المقلوبة والفريكة</a>
+    <a href="#daily">برنامج الوجبات اليومية</a>
+    <a href="#individual">الوجبات الفردية</a>
+</nav>
+
+<div class="content" id="home">
+    <h2>أهلا وسهلا بكم في مطعم مؤمن</h2>
+</div>
+
+<div class="content" id="sandwiches">
+    <h2>الساندويشات</h2>
+    <div class="menu">
+        <div class="menu-category">
+            <h3>السناكات</h3>
+            <ul>
+                <li>ساندويش زنجر فرنسي مع بطاطا<span class="price">1.90 JD</span></li>
+                <li>ساندويش فعفوط فرنسي مع بطاطا<span class="price">1.90 JD</span></li>
+                <li>ساندويش سكالوب خبز برغر مع بطاطا<span class="price">1.50 JD</span></li>
+                <li>ساندويش كبدة خبز كعك مع بطاطا<span class="price">1.00 JD</span></li>
+                <li>ساندويش كبدة خبز حمام مع بطاطا<span class="price">0.60 JD</span></li>
+            </ul>
+        </div>
+        <div class="menu-category">
+            <h3>الفلافل</h3>
+            <ul>
+                <li>ساندويش فلافل خبز كعك مع بطاطا<span class="price">0.60 JD</span></li>
+                <li>ساندويش فلافل خبز حمام مع بطاطا<span class="price">0.40 JD</span></li>
+                <li>ساندويش فلافل خبز لف مع سلطة ومخلل<span class="price">0.35 JD</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="frying">
+    <h2>المقالي</h2>
+    <div class="menu">
+        <div class="menu-category">
+            <h3>القلايات والصحون</h3>
+            <ul>
+                <li>قلاية بندوره مع ثوم وبصل<span class="price">1.25 JD</span></li>
+                <li>مفركة بطاطا مع بيض وبصل وبقدونس<span class="price">1.25 JD</span></li>
+                <li>مفركة بطاطا مع لحمة<span class="price">2.50 JD</span></li>
+                <li>قلاية بندوره مع لحمة<span class="price">2.50 JD</span></li>
+                <li>حمص باللحمة مع زيت زيتون<span class="price">2.50 JD</span></li>
+                <li>قلاية لحمة مع بصل<span class="price">2.50 JD</span></li>
+                <li>كبدة دجاج مع بصل وخضار ودبس رمان<span class="price">2.00 JD</span></li>
+                <li>كبدة دجاج على حمص<span class="price">2.50 JD</span></li>
+                <li>شكشوكة<span class="price">1.25 JD</span></li>
+                <li>صحن عجة بيض<span class="price">1.00 JD</span></li>
+                <li>صحن بيض<span class="price">0.75 JD</span></li>
+                <li>صحن ميمعة<span class="price">2.25 JD</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="mansaf">
+    <h2>المنسف</h2>
+    <div class="menu">
+        <div class="menu-category">
+            <h3>سدر منسف</h3>
+            <ul>
+                <li>سدر منسف (3ك لحمه ) - (3ك جميد) - (3ك رز)<span class="price">35.00 JD</span></li>
+                <li>سدر منسف (2ك لحمه ) - (2ك جميد) - (2ك رز)<span class="price">24.00 JD</span></li>
+                <li>سدر منسف (1ك لحمه ) - (1ك جميد) - (1ك رز)<span class="price">15.00 JD</span></li>
+            </ul>
+        </div>
+        
+        <div class="menu-category">
+            <h3>سدر منسف لحم روماني جميد بلدي + سمن بلدي</h3>
+            <ul>
+                <li>منسف (2ك لحمه ) - (2ك جميد) - (2ك رز)<span class="price">32.00 JD</span></li>
+                <li>منسف (3ك لحمه ) - (3ك جميد) - (3ك رز)<span class="price">45.00 JD</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="mandi">
+    <h2>طبيخ</h2>
+    <div class="menu">
+        <div class="menu-category">
+            <h3>المندي</h3>
+            <ul>
+                <li>سدر مندي (3)دجاجة – (3) رز +(4) لبن مع خيار + (4) دقوس<span class="price">22.00 JD</span></li>
+                <li>سدر مندي (2)دجاجة – (2) رز  + (3) لبن مع خيار + (3) دقوس<span class="price">16.00 JD</span></li>
+                <li>سدر مندي (1.5)دجاجة – (1.5ك) رز  + (3) لبن مع خيار + (3) دقوس<span class="price">12.00 JD</span></li>
+                <li>سدر مندي (1)دجاجة – (1ك) رز  + (2) لبن مع خيار + (2) دقوس<span class="price">8.00 JD</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="tawasi">
+    <h2>التواصي حسب الطلب</h2>
+    <div class="menu">
+        <div class="menu-category">
+            <h3>التواصي</h3>
+            <ul>
+                <li>خاروف محشي رز + لبن بخيار + دقوس<span class="price">.00 JD</span></li>
+                <li>ضلعة محشية رز + لبن بخيار + دقوس<span class="price">.00 JD</span></li>
+                <li>رقاب محشية رز + لبن بخيار + دقوس<span class="price">.00 JD</span></li>
+                <li>كتف مشوي مع رز من اختيارك + لبن بخيار + دقوس<span class="price">.00 JD</span></li>
+                <li>فخذ مشوي مع رز من اختيارك + لبن بخيار + دقوس<span class="price">.00 JD</span></li>
+                <li>صياية سمك<span class="price">.00 JD</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="maqluba">
+    <h2>المقلوبة والفريكة</h2>
+    <div class="menu">
+        <div class="menu-category">
+            <h3>المقلوبة والفريكة</h3>
+            <ul>
+                <li>سدر مقلوبة او فريكة 1دجاجة<span class="price">10.00 JD</span></li>
+                <li>سدر مقلوبة او فريكة 2دجاجة<span class="price">18.00 JD</span></li>
+                <li>سدر مقلوبة او فريكة 3دجاجة<span class="price">25.00 JD</span></li>
+                <h5>يضاف مع كل سدر لبن بخيار</h5>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="daily">
+    <h2>برنامج الوجبات اليومية</h2>
+    <div class="menu">
+        <div class="menu-category">
+            <h3>الوجبات حسب الأيام</h3>
+            <ul>
+                <li>السبت: مندي + منسف +كبسة</li>
+                <li>الأحد: مندي + منسف + مقلوبة</li>
+                <li>الاثنين: مندي + منسف + بخاري</li>
+                <li>الثلاثاء: مندي + منسف + قدرة</li>
+                <li>الأربعاء: مندي + منسف + اورزي</li>
+                <li>الخميس: مندي + منسف + زرب</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="individual">
+    <h2>الوجبات الفردية</h2>
+    <div class="menu">
+        <div class="menu-category">
+            <h3>الوجبات الفردية</h3>
+            <ul>
+                <li>منسف لحمة<span class="price">4.50 JD</span></li>
+                <li>منسف دجاج<span class="price">2.75 JD</span></li>
+                <li>رز من اختيارك + ربع دجاجة + لبن مع خيار + دقوس<span class="price">2.50 JD</span></li>
+                <li>رز من اختيارك + نص دجاجة + لبن مع خيار + دقوس<span class="price">4.00 JD</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Momen Restaurant. All Rights Reserved.
+</footer>
+
+</body>
+</html>
